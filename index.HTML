@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Card Flip</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Card Flip Game</h1>
 
-    <div class="grid-container">
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-      <div class="grid-item">hidden</div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Flip</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <script src="script.js"></script>
-  </body>
+<body>
+  <h1>Card Flip Game <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span> <button
+      onclick="restart()">Play again</button></h1>
+
+
+  <div class="grid-container">
+    <div class="grid-item" id='1' clickable="1">hidden</div>
+    <div class="grid-item" id='2' clickable="1">hidden</div>
+    <div class="grid-item" id='3' clickable="1">hidden</div>
+    <div class="grid-item" id='4' clickable="1">hidden</div>
+    <div class="grid-item" id='5' clickable="1">hidden</div>
+    <div class="grid-item" id='6' clickable="1">hidden</div>
+    <div class="grid-item" id='7' clickable="1">hidden</div>
+    <div class="grid-item" id='8' clickable="1">hidden</div>
+    <div class="grid-item" id='9' clickable="1">hidden</div>
+    <div class="grid-item" id='10' clickable="1">hidden</div>
+    <div class="grid-item" id='11' clickable="1">hidden</div>
+    <div class="grid-item" id='12' clickable="1">hidden</div>
+    <div class="grid-item" id='13' clickable="1">hidden</div>
+    <div class="grid-item" id='14' clickable="1">hidden</div>
+    <div class="grid-item" id='15' clickable="1">hidden</div>
+    <div class="grid-item" id='16' clickable="1">hidden</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
