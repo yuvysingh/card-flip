@@ -1,2 +1,3 @@
 # card-flip
-memory game made in js 
+memory card flip game made in js 
+Deployment here [Click Here](https://card-flip-five.vercel.app/)
