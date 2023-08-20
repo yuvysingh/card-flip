@@ -3,6 +3,7 @@ let cards = new Map();
 let nums = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 let start = false
 
+
 // shuffles arr of nums
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -37,14 +38,17 @@ setInterval(function () {
 // put an event listener on all the cards
 cardElements.forEach((element) => {
   element.addEventListener("click", function (element) {
-    turnOver(element.target);
+    if (!(flippedCards.length % 2 == 0) || flippedCards.length == 0) {
+      turnOver(element.target);
+    }
+
+
   });
 });
 
 // checks if the last two cards are the same
 function checkCards() {
   let pair = flippedCards.slice(-2);
-  console.log(pair[0] == pair[1])
   if (pair[0] == pair[1]) {
 
     return 0
@@ -87,7 +91,6 @@ function turnOver(element) {
     element.innerText = `  ${cards.get(element)}  `;
     flippedCards.push(element);
     element.clickable = "0"
-    console.log(element.getAttribute("clickable"))
 
     if (flippedCards.length % 2 === 0) {
 
@@ -95,6 +98,7 @@ function turnOver(element) {
 
       if (SameCards == 2) {
         timeout(1000);
+
       }
       else if (SameCards == 1) {
         array = flippedCards.splice(-2);
@@ -102,10 +106,13 @@ function turnOver(element) {
           matchingCards.push(array[i])
         }
         flippedCards.splice(flippedCards.length - 2, 2);
+
       }
       else if (SameCards == 0) {
         flippedCards.pop()
+
       }
+
 
     }
   }
